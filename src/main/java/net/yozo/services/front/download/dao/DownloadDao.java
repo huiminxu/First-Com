@@ -1,0 +1,1 @@
+package net.yozo.services.front.download.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.download.bean.Download;public interface DownloadDao extends DaoManager<Download> {	int selectCount(Download download);	void updateLastDownloadTime(Download download);}

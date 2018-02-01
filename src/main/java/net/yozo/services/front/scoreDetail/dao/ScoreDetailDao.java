@@ -1,0 +1,1 @@
+package net.yozo.services.front.scoreDetail.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.scoreDetail.bean.ScoreDetail;public interface ScoreDetailDao extends DaoManager<ScoreDetail> {}

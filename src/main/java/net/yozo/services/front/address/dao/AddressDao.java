@@ -1,0 +1,1 @@
+package net.yozo.services.front.address.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.address.bean.Address;public interface AddressDao extends DaoManager<Address> {	/**	 * 初始化所有的地址全部为不选择	 */	void initAllAddress(Address address);}

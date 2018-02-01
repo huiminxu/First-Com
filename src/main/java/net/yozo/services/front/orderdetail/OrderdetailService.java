@@ -1,0 +1,1 @@
+package net.yozo.services.front.orderdetail;import net.yozo.core.Services;import net.yozo.services.front.orderdetail.bean.Orderdetail;public interface OrderdetailService extends Services<Orderdetail> {}

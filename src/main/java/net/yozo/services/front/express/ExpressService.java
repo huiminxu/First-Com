@@ -1,0 +1,1 @@
+package net.yozo.services.front.express;import net.yozo.core.Services;import net.yozo.services.front.express.bean.Express;public interface ExpressService extends Services<Express> {}

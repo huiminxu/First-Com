@@ -1,0 +1,1 @@
+package net.yozo.services.front.navigation.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.navigation.bean.Navigation;public interface NavigationDao extends DaoManager<Navigation> {}

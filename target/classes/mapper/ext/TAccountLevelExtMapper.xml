@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.yozo.account.mapper.ext.TAccountLevelExtMapper" >
+    <resultMap id="BaseExtResultMap" type="net.yozo.account.dto.AccountLevel" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="level" property="level" jdbcType="INTEGER" />
+        <result column="minvalues" property="minvalues" jdbcType="INTEGER" />
+        <result column="maxvalues" property="maxvalues" jdbcType="INTEGER" />
+    </resultMap>
+
+    <select id="selectAccountLevel" resultMap="BaseExtResultMap"  >
+        SELECT l.* FROM t_account_level l
+    </select>
+</mapper>

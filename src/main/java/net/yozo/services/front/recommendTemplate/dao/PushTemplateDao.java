@@ -1,0 +1,1 @@
+package net.yozo.services.front.recommendTemplate.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.recommendTemplate.bean.PushTemplate;public interface PushTemplateDao extends DaoManager<PushTemplate> {}

@@ -1,0 +1,1 @@
+package net.yozo.services.front.catalog.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.catalog.bean.Catalog;public interface CatalogDao extends DaoManager<Catalog> {    /**     * 根据code中包含的关键字超找Catalog的id     * @param code code中包含的关键字     * */    public String selectCatalogIDbyCode(String code);}

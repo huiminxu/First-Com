@@ -1,0 +1,1 @@
+package net.yozo.services.front.commentType.bean;import java.io.Serializable;public class CommentType extends net.yozo.services.common.CommentType implements Serializable {	private static final long serialVersionUID = 1L;	public void clear() {		super.clear();	}}

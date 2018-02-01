@@ -1,0 +1,1 @@
+package net.yozo.services.front.navigation.bean;import java.io.Serializable;public class Navigation extends net.yozo.services.common.Navigation		implements Serializable {	private static final long serialVersionUID = 1L;	public void clear() {		super.clear();	}}

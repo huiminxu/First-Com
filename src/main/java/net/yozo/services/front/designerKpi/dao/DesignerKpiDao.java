@@ -1,0 +1,1 @@
+package net.yozo.services.front.designerKpi.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.designerKpi.bean.DesignerKpi;public interface DesignerKpiDao extends DaoManager<DesignerKpi> {    DesignerKpi compareWithAverage();    /**     * 根据设计师未完成数量     * @param designerId  设计师ID     */    void updateDesingerUnfinishQty(Integer designerId);}

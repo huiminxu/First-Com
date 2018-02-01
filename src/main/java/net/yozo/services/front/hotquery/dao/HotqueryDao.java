@@ -1,0 +1,1 @@
+package net.yozo.services.front.hotquery.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.hotquery.bean.Hotquery;public interface HotqueryDao extends DaoManager<Hotquery> {}

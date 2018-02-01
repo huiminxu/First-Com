@@ -1,0 +1,1 @@
+package net.yozo.services.front.emailNotifyProduct.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.emailNotifyProduct.bean.EmailNotifyProduct;public interface EmailNotifyProductDao extends DaoManager<EmailNotifyProduct> {	int selectCount(EmailNotifyProduct ep);}

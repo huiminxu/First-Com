@@ -1,0 +1,1 @@
+package net.yozo.services.front.accountRank.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.accountRank.bean.AccountRank;public interface AccountRankDao extends DaoManager<AccountRank> {}

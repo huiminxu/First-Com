@@ -1,0 +1,1 @@
+package net.yozo.services.front.scoreTask.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.scoreTask.bean.ScoreTask;public interface ScoreTaskDao extends DaoManager<ScoreTask> {    /**     * 根据标识获取积分任务     * @param flag     * @return     */    ScoreTask getScoreTaskByFlag(String flag);}

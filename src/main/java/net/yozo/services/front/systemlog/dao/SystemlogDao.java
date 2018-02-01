@@ -1,0 +1,1 @@
+package net.yozo.services.front.systemlog.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.systemlog.bean.Systemlog;public interface SystemlogDao extends DaoManager<Systemlog> {}

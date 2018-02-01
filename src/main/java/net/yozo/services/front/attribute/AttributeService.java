@@ -1,0 +1,1 @@
+package net.yozo.services.front.attribute;import net.yozo.core.Services;import net.yozo.services.front.attribute.bean.Attribute;public interface AttributeService extends Services<Attribute> {}

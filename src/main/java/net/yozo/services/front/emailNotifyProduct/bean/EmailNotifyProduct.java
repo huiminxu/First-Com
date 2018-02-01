@@ -1,0 +1,1 @@
+package net.yozo.services.front.emailNotifyProduct.bean;import java.io.Serializable;public class EmailNotifyProduct extends		net.yozo.services.common.EmailNotifyProduct implements Serializable {	private static final long serialVersionUID = 1L;	public void clear() {		super.clear();	}}

@@ -1,0 +1,1 @@
+package net.yozo.services.front.gift.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.gift.bean.Gift;public interface GiftDao extends DaoManager<Gift> {}

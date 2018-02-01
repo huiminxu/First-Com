@@ -1,0 +1,1 @@
+package net.yozo.account.dto;import net.yozo.account.entity.TAccountLevel;public class AccountLevel extends TAccountLevel{}

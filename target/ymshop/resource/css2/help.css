@@ -1,0 +1,148 @@
+
+.help-box {
+    font-size: 1.2rem;
+}
+
+.help-box .main dt {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.help-box .main dd {
+    line-height: 2rem;
+}
+
+.help-box .main ul {
+    padding-left: 2em;
+    margin-bottom: 8px;
+}
+
+.help-box .main ul li {
+    margin-bottom: 5px;
+}
+
+.help-box .main p {
+    text-indent: 2rem;
+}
+
+.help-box .main li i {
+    margin-right: 6px;
+}
+.help-box .list-group{width:100%;}
+.help-box .list-group li.active .list-group-item {
+
+}
+
+.help-box .list-group li {
+    margin-bottom: 0;
+}
+.helpcentertop{
+    background: url("../images/helpcenter/help_bg.png") no-repeat center center #f4f4e9;
+    -webkit-background-size:cover;
+    background-size:cover;
+    margin-bottom: 30px;
+    min-width:1200px;
+}
+.helpcentertop img{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width:100%;
+    height:auto;
+
+
+}
+.helpcentercont{
+    padding:0 11.5%;
+   overflow: hidden;
+    margin-bottom: 120px;
+
+}
+.helpcentercont .aside{
+    float: left;
+    height:100%;
+    padding-bottom: 139px;
+    background-color: #f6f6f6;
+
+
+}
+
+.helpcentercont .aside li{
+    padding:11px  33px 13px 22px;
+    font-size:14px;
+    line-height:14px;
+    color: #2f2e2e;
+    background-color: #f6f6f6;
+
+}
+.helpcentercont .aside li:hover{
+
+}
+
+.helpcentercont .aside li.active{
+
+    background-color: #fff;
+}
+.helpcentercont .aside li：hover a, .helpcentercont .aside li.active a{
+    color: #48b84a;
+}
+.helpcentercont .aside li.guide{
+    padding:16px  27px 12px 19px;
+    font-size:16px;
+}
+
+.helpcont{
+    float: left;
+    width: 86%;
+    margin-left: 12px;
+    background-color: #f6f6f6;
+    padding:0px 27px;
+}
+.helpcont h3:hover{
+    color: #48b84a;
+    cursor: pointer;
+}
+.helpcont h3{
+    float: left;
+    font-size:16px;
+    color: #787674;
+    font-weight:bold;
+    margin: 25px 0px 17px 0px;
+
+
+}
+.toggleColor{
+    color: #48b84a !important;
+    cursor: pointer;
+}
+.helpcont p{
+    position: relative;
+    clear: both;
+    font-size:14px;
+    line-height:20px;
+    color: #575a5d;
+    font-weight:normal;
+    margin:0px;
+    padding: 0px 20px 20px 0px;
+    border-bottom: 1px solid #d2d2d2;
+
+
+}
+.helpcont p i{
+    position: absolute;
+    font-size:20px;
+    right:0px;
+    cursor: pointer;
+
+}
+.helpcont p i:hover{
+    color: #48b84a;
+}
+.helpcont p.last{
+    border-bottom: none;
+}
+.addDefault{
+    height: 35px;
+    line-height: 28px !important;
+    overflow: hidden;
+
+}

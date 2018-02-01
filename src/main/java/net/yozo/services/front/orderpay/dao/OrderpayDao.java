@@ -1,0 +1,1 @@
+package net.yozo.services.front.orderpay.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.order.bean.Order;import net.yozo.services.front.orderpay.bean.Orderpay;public interface OrderpayDao extends DaoManager<Orderpay> {	Orderpay selectByOrderId(Order exist);}

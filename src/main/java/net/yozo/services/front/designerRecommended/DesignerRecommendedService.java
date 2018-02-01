@@ -1,0 +1,1 @@
+package net.yozo.services.front.designerRecommended;import net.yozo.core.Services;import net.yozo.services.front.designerRecommended.bean.DesignerRecommended;public interface DesignerRecommendedService extends Services<DesignerRecommended> {}

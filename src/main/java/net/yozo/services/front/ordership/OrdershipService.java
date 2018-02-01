@@ -1,0 +1,1 @@
+package net.yozo.services.front.ordership;import net.yozo.core.Services;import net.yozo.services.front.ordership.bean.Ordership;public interface OrdershipService extends Services<Ordership> {}

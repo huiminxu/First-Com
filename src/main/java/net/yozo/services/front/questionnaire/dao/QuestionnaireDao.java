@@ -1,0 +1,1 @@
+package net.yozo.services.front.questionnaire.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.questionnaire.bean.Questionnaire;public interface QuestionnaireDao extends DaoManager<Questionnaire> {}

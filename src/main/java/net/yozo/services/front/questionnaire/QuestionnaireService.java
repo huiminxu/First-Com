@@ -1,0 +1,1 @@
+package net.yozo.services.front.questionnaire;import net.yozo.core.Services;import net.yozo.services.front.questionnaire.bean.Questionnaire;public interface QuestionnaireService extends Services<Questionnaire> {}

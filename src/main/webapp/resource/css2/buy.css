@@ -1,0 +1,352 @@
+/*********
+            buy  css
+                           *******/
+
+.buy-box {
+	position: relative;
+	padding-top: 65px;
+	background-color: #f6f6f6;
+	padding-bottom: 96px;
+}
+
+.buy-box .buy-main {
+	width: 1124px;
+	padding: 20px 40px;
+	margin: 0 auto;
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+}
+
+.buy-box-bg {
+	background-image: -webkit-linear-gradient(to left, #5ac8fa, #50fbdc);
+	background-image: linear-gradient(to left, #5ac8fa, #50fbdc);
+	background-color: #61cff8;
+	height: 270px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+
+/*柚点购买*/
+
+.recharge-box {
+	width: 1020px;
+	position: relative;
+	padding-bottom: 150px;
+	margin-top: 20px;
+}
+
+.recharge-list {}
+
+.recharge-list li {
+	float: left;
+	width: 33%;
+	cursor: pointer;
+	margin-bottom: 47px;
+	height: 83px;
+	text-indent: -9999px;
+	text-align: center;
+}
+
+.recharge-list li.tp1 {
+	background: url('../images/yd-1.png') no-repeat center center;
+}
+
+.recharge-list li.tp1:hover,
+.recharge-list li.tp1.active {
+	background: url('../images/yd-1-on.png') no-repeat center center;
+}
+
+.recharge-list li.tp2 {
+	background: url('../images/yd-2.png') no-repeat center center;
+}
+
+.recharge-list li.tp2:hover,
+.recharge-list li.tp2.active {
+	background: url('../images/yd-2-on.png') no-repeat center center;
+}
+
+.recharge-list li.tp3 {
+	background: url('../images/yd-3.png') no-repeat center center;
+}
+
+.recharge-list li.tp3:hover,
+.recharge-list li.tp3.active {
+	background: url('../images/yd-3-on.png') no-repeat center center;
+}
+
+.recharge-list li.tp4 {
+	background: url('../images/yd-4.png') no-repeat center center;
+}
+
+.recharge-list li.tp4:hover,
+.recharge-list li.tp4.active {
+	background: url('../images/yd-4-on.png') no-repeat center center;
+}
+
+.recharge-list li.tp5 {
+	background: url('../images/yd-5.png') no-repeat center center;
+}
+
+.recharge-list li.tp5:hover,
+.recharge-list li.tp5.active {
+	background: url('../images/yd-5-on.png') no-repeat center center;
+}
+
+.recharge-list li.tp6 {
+	background: url('../images/yd-more.png') no-repeat center center;
+	cursor: default;
+}
+
+.recharge-result {
+	margin-right: 110px;
+	width: 260px;
+	position: absolute;
+	right: 0;
+}
+
+span.recharge-money {
+	color: #f9a431;
+	font-size: 2.571428571428571rem;
+	padding: 0 3px;
+}
+
+
+/*会员购买*/
+
+.memberrec-box {
+	width: 1020px;
+	position: relative;
+	padding-bottom: 150px;
+	margin-top: 20px;
+}
+
+.memberrec-list {
+	margin: 0;
+}
+
+.memberrec-list li {
+	float: left;
+	width: 25%;
+	cursor: pointer;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	height: 84px;
+	margin-left: 6%;
+	text-align: center;
+	position: relative;
+}
+.memberrec-list li .discount{
+	width: 41px;
+	height: 41px;
+	background: url(../images/discount_icon.png);
+	position: absolute;
+	left: -9px;
+	top: -13px;
+
+}
+
+.memberrec-list li:before{
+	content:'';
+	width:2px;
+	position: absolute;
+	display: inline-block;
+	top:9px;
+	bottom:0px;
+	z-index:19999;
+	left:50%;
+	background: url('../images/line.png');
+}
+.memberrec-list li h3,p{
+	margin:0px;
+	padding:0px;
+	width:50%;
+	float: left;
+
+}
+.memberrec-list li h3{
+	font-size:18px;
+	height:18px;
+	line-height:18px;
+	margin-top: 26px;
+	font-weight:600;
+	font-family: "Adobe 黑体 Std R";
+}
+
+.memberrec-list li p.vipmember{
+	margin-top:-10px;
+	font-size:12px;
+	height:31px;
+	font-family: "Adobe 黑体 Std R";
+
+}
+.memberrec-list li p.price{
+	width:auto;
+	line-height:36px;
+	font-size:36px;
+	margin-top:25px;
+	min-width:100px;
+ text-align: right;
+	position: relative;
+	margin-left: 5px;
+
+
+}
+.memberrec-list li p.price strong{
+	position: absolute;
+	bottom:-25px;
+	right:0px;
+	font-size:12px;
+
+	font-weight:normal ;
+}
+.memberrec-list li p.warn del{
+	display: inline-block;
+	text-indent: -53px;
+
+}
+.memberrec-list li {
+	background-image: linear-gradient(to right, #5ac8fa, #50fbdc);
+	background-color: #61cff8;
+	border-radius: 10px;
+	position: relative;
+	color: #fff;
+}
+
+.memberrec-list li.tp:hover,
+.memberrec-list li.tp.active {
+	box-shadow:2px 2px 16px  #8f8f8f;
+}
+.btn-buy4,
+.btn-buy6,
+.btn-pay5 {
+	font-size: 1.714285714285714rem;
+	color: #fff;
+}
+
+.btn-buy4 {
+	padding: 8px 60px;
+	border-radius: 8px;
+	background-image: -webkit-linear-gradient(to right, #84f1db, #7bd18a);
+	background-image: linear-gradient(to right, #f9a431, #f970c0);
+	background-color: #84f1db;
+}
+.btn-pay5 {
+	padding: 8px 50px;
+	border-radius: 8px;
+	background-image: -webkit-linear-gradient(to right, #84f1db, #7bd18a);
+	background-image: linear-gradient(to right, #84f1db, #7bd18a);
+	background-color: #84f1db;
+}
+
+.btn-buy6 {
+	padding: 12px 46px;
+	border-radius: 25px;
+	background-image: -webkit-linear-gradient(to left, #5ac8fa, #50fbdc);
+	background-image: linear-gradient(to left, #5ac8fa, #50fbdc);
+	background-color: #5ac8fa;
+
+	border: 0px;
+}
+.btn-buy6:hover{
+	box-shadow: 0px 4px 5px #d8d8d8;
+}
+
+
+/*********
+            支付  css
+                           *******/
+
+.pay-box {
+	width: 580px;
+	margin: 0 auto;
+	padding: 0px 40px;
+}
+
+.pay-box h4 {
+	color: #8b8d8f;
+	margin-top: 0;
+	padding-top: 18px;
+}
+
+.paytype-list {}
+
+.paytype-list li {
+	float: left;
+	width: 46%;
+	margin: 0 2%;
+	text-align: center;
+}
+
+.paytype-list li>p>img {
+	border: 1px solid #959595;
+	border-radius: 8px;
+	width: 100%;
+	height: 230px;
+}
+
+
+/*.paytype-list li.wx-item > p > img {padding:12px;}*/
+
+.pay-detail {}
+
+.pay-detail p:first-child {}
+
+.pay-detail .detail-order {
+	color: #717f81;
+	padding: 0;
+}
+
+.pay-detail .order-num {
+	margin-right: 4px;
+}
+
+.pay-detail .order-name {
+	margin-left: 4px;
+}
+
+.pay-detail a {
+	color: #989898;
+}
+
+.pay-box a.btn-link {
+	color: #48b84b;
+}
+
+.pay-box a:hover,
+.pay-box a:focus,
+.pay-box a:visited {
+	text-decoration: none;
+}
+
+
+/*支付结果 */
+
+.pay-box .pay-result {
+	text-align: center;
+	color: #a2a5a4;
+	font-size: 1.166666rem;
+}
+
+.pay-box .pay-result h4 {
+	font-size: 1.714285714285714rem;
+	margin-top: 30px;
+}
+
+.pay-box .pay-result p.res-img {
+	width: 41.2%;
+	height: auto;
+	 margin: 0 auto;
+}
+
+.pay-box .pay-result img {
+	margin: 35px 0;
+}
+
+.pay-box .pay-result a {
+	font-size: 1.285714rem;
+}

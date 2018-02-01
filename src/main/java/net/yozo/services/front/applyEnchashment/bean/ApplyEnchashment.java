@@ -1,0 +1,1 @@
+package net.yozo.services.front.applyEnchashment.bean;import java.io.Serializable;public class ApplyEnchashment extends net.yozo.services.common.ApplyEnchashment implements Serializable {	public void clear() {		super.clear();	}}

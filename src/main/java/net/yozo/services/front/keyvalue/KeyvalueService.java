@@ -1,0 +1,1 @@
+package net.yozo.services.front.keyvalue;import net.yozo.core.Services;import net.yozo.services.front.keyvalue.bean.Keyvalue;public interface KeyvalueService extends Services<Keyvalue> {}

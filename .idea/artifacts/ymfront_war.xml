@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ymfront:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="ymshop.war">
+      <element id="artifact" artifact-name="ymfront:war exploded" />
+    </root>
+  </artifact>
+</component>

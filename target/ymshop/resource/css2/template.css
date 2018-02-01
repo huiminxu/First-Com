@@ -1,0 +1,326 @@
+.col-md-pl0{padding-left: 0;}
+.col-md-pr0{padding-right: 0;}
+input[type='button'],input[type='file']{cursor: pointer;}
+
+
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active,
+.btn-green:visited{
+    background: #48b84b;
+}
+
+
+
+/*-------------------------------------------------------------------------
+                      TempletUpdata  用户上传
+ ----------------------------------------------------------------------------*/
+
+.templetupdata-box {
+    min-height: 456px;
+    font-size: 1.333333333333333rem;
+    width: 100%;
+    padding-top: 17px;
+
+}
+
+.templetupdata-box .radio-inline input[type=radio]{margin-top: 4px; }
+.templetupdata-box p{font-size: 1.333333333333333rem;}
+.templetupdata-box .btn-yozo{ font-size: 20px;}
+.templetupdata-box label{margin-bottom:10px;}
+.templetupdata-box .breadcrumbBox{
+    height: 26px;
+    line-height: 26px;
+}
+
+
+
+.templetupdata-box .btn-default{
+    background-color: #fff!important;
+    color: #333!important;
+}
+
+
+.templetupdata-box .btn-success {
+    background-color: #47b84a!important;
+    color: #fff!important;
+}
+
+/*nice-validator 样式重写*/
+
+.templetupdata-box div.msg-box {
+    margin-top: 2px !important;
+    display: inline;
+    position: absolute; bottom:-2px; left: 0;
+}
+
+.templetupdata-box .msg-wrap {
+    margin-left: 0 !important;
+}
+
+.templet-nav {
+    padding-top: 16px;
+    padding-bottom: 33px;
+    font-size: 1.6em;
+    color: #575a5d;
+}
+
+.templet-nav .nav {
+    width: auto;
+    height: auto;
+    line-height: normal;
+}
+
+.templet-nav .nav > li > a {
+    padding: 0;
+}
+
+.templet-nav .nav_bottom {
+}
+
+.templet-nav .nav-title {
+    float: left;
+    border-left: 8px solid #46b749;
+    padding-left: 7px;
+}
+
+.templet-nav .nav-title {
+    margin-right: 84px;
+}
+
+.templet_container {
+    margin-top: 15px;
+    padding-top: 30px;
+    background-color: #ededed;
+    padding-bottom: 10px;
+}
+
+.templet_container .wid_218 {
+    width: 248px;
+}
+
+.templet_container .user-info {
+    padding: 0 0 8px;
+    font-size: 0.8em;
+}
+
+.templet_container .user-info span {
+    height: 28px;
+    line-height: 28px;
+    /*display: inline-block;*/
+}
+
+
+
+.templet_container .user-info .pull-left {
+    position: relative;
+    top: -2px;
+}
+
+.templet_container .templet-preview p {
+    margin-top: 10px;
+}
+
+#formOfficeTemplet .templet-preview .img-area{height:430px; overflow: hidden; }
+#formOfficeTemplet .templet-preview img{min-height:430px; }
+#formAeTemplet .templet-preview .img-area{height:162px; overflow: hidden; }
+#formAeTemplet .templet-preview .img-area img{min-height: 162px;}
+#formEmotionTemplet .templet-preview .img-area{height:270px; overflow: hidden; }
+#formEmotionTemplet .templet-preview .img-area img{min-height: 270px;}
+.templet_container .templet-preview img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+.templet_container .templet-preview .preImg-button {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.templet_container .templet-preview .n-right {
+}
+
+.templet_container .wid_218 > button, .templet_container .wid_290 > button, .templet_container .wid_270 > button {
+    width: 100%;
+    padding: 0;
+}
+.templet_container .preImg-button button[type='button']{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.templet_container  button {
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 20px;
+}
+
+.templet_container .form-group {
+    margin-bottom: 20px;
+}
+
+.templet_container .form-control {
+    padding: 15px;
+    padding-right: 25px;
+    min-height: 50px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.templet_container .form-control-feedback {
+    height: 50px;
+    line-height: 50px;
+}
+
+.templet-tips a {
+    font-size: 12px;
+    margin-right: 3px;
+    color: #5e6a72;
+    height: 24px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.templet-tips a > span {
+    float: left;
+    background-color: #d7d6d4;
+    padding-left: 4px;
+    width: 64px;
+    border-radius: 0 4px 4px 0;
+    display: inline-block;
+    height: 100%;
+    line-height: 2;
+}
+
+.templet-tips a:before {
+    float: left;
+    overflow: hidden;
+    content: "";
+    width: 9px;
+    height: 100%;
+    display: inline-block;
+    background: url('../images/icon.png') -31px -54px no-repeat;
+}
+
+.templet-tips .col-md-1 {
+    padding-right: 0;
+}
+
+.templet-tips .col-md-11 {
+    padding-left: 0;
+}
+
+.templet-select .form-control-feedback, .pptsize-select .form-control-feedback {
+    right: -15%;
+}
+
+.fileinput-button {
+    position: relative;
+}
+
+.fileinput-button input[type='button'] {
+    text-align: left;
+}
+
+.fileinput-button input[type='file'], .templet_container .templet-preview input[type='file'] {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    padding: 0;
+   font-size:20px;
+   cursor: pointer;
+}
+
+.fileinput-button .linkVideo {
+    display: none;
+}
+
+.templet_container label {
+    font-size: 1.333333333333333rem;
+    display: block;
+    color: #34495e;
+}
+
+.templet_container .label-add .pull-right {
+    color: #b1b0a7;
+    font-size: 12px;
+}
+
+.templet_container .label-add .icon_tip {
+    margin-right: 8px;
+}
+
+.templet_container .tips-container {
+    position: relative;
+    top:-10px;
+}
+
+.templet_container .tips-box{  height: 100px;}
+
+.templet_container .tips-box span {
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.trigger-warn .text-danger {
+    color: #FF0000 !important;
+    display: none;
+}
+
+.templet_container .mb {
+    margin-bottom: 10px !important;
+}
+
+.templet_container .help-block {
+    font-size: 1rem;
+    color: #b1b0a7;
+    margin-top: 17px;
+}
+
+.templet_container .help-block > em {
+    font-size: 1.2em;
+    margin-right: 5px;
+    font-style: normal;
+}
+
+.templet_container .radio-inline {
+    font-size: 1em;
+}
+
+.templet_container .radiolist {
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
+
+.templet_container .radiolist label {
+    display: inline-block;
+}
+
+.templet_container .tooltip {
+    opacity: 1 !important;
+}
+
+/*ea css*/
+.templet_container .wid_290 {
+    width: 290px;
+}
+
+.templet_container .wid_290 .templet-preview video {
+    width: 100%;
+    height: 162px;
+}
+
+.templet_container .wid_270 {
+    width: 270px;
+}
+

@@ -1,0 +1,1 @@
+package net.yozo.services.front.express.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.express.bean.Express;import org.springframework.stereotype.Repository;@Repository("expressFront")public interface ExpressDao extends DaoManager<Express> {}

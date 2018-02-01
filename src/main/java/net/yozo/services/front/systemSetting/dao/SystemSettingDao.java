@@ -1,0 +1,1 @@
+package net.yozo.services.front.systemSetting.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.systemSetting.bean.SystemSetting;public interface SystemSettingDao extends DaoManager<SystemSetting> {}

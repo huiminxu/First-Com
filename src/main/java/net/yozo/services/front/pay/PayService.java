@@ -1,0 +1,1 @@
+package net.yozo.services.front.pay;import net.yozo.core.Services;import net.yozo.services.front.order.bean.Order;import net.yozo.services.front.pay.bean.Pay;public interface PayService extends Services<Pay> {    //获取微信二维码    String getWeixinQR(Order order);    //获取支付宝二维码    String getZhifubaoQR(Order order);    //查询微信支付结果    String payQuery(Order order);}

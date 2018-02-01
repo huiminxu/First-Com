@@ -1,0 +1,1 @@
+package net.yozo.services.front.comment.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.comment.bean.Comment;public interface CommentDao extends DaoManager<Comment> {	int selectCount(String orderid);}

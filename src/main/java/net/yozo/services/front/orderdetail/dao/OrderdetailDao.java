@@ -1,0 +1,1 @@
+package net.yozo.services.front.orderdetail.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.orderdetail.bean.Orderdetail;public interface OrderdetailDao extends DaoManager<Orderdetail> {	int selectCount(String orderID);}

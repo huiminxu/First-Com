@@ -1,0 +1,1 @@
+package net.yozo.services.front.systemlog;import net.yozo.core.Services;import net.yozo.services.front.systemlog.bean.Systemlog;public interface SystemlogService extends Services<Systemlog> {}

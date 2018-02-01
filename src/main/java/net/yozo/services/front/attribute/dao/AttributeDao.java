@@ -1,0 +1,1 @@
+package net.yozo.services.front.attribute.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.attribute.bean.Attribute;public interface AttributeDao extends DaoManager<Attribute> {	/**	 * @param e	 */	void deleteByPid(Attribute e);}

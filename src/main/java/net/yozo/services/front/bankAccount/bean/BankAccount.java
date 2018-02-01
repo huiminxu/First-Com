@@ -1,0 +1,1 @@
+package net.yozo.services.front.bankAccount.bean;import java.io.Serializable;public class BankAccount extends net.yozo.services.common.BankAccount implements Serializable {	public void clear() {		super.clear();	}}

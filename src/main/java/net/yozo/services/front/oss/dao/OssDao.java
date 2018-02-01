@@ -1,0 +1,1 @@
+package net.yozo.services.front.oss.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.oss.bean.Oss;public interface OssDao extends DaoManager<Oss> {}

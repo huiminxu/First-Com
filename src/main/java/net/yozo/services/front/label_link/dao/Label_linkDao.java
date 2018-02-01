@@ -1,0 +1,1 @@
+package net.yozo.services.front.label_link.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.label_link.bean.Label_link;public interface Label_linkDao extends DaoManager<Label_link> {	/**	 * @param e	 * @return	 */	int deleteByCondition(Label_link e);	/**	 * 根据属性ID删除属性关联表的数据	 * @param id	 */	void deleteByLabelId(int id);}

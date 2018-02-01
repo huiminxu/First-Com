@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- create by autoCode,v1.0.0 -->
+<mapper namespace="front.topicTemplate">
+    <select id="front.topicTemplate.selectPageList" parameterType="net.yozo.services.front.TopicTemplate.bean.TopicTemplate"
+            resultType="net.yozo.services.front.template.bean.Template">
+        <![CDATA[
+            SELECT t.*,tt.sort from t_topic_template tt
+             LEFT JOIN t_template t on tt.template_id = t.id and t.status=1
+             where topic_id = #{topicId} order by sort asc limit #{offset},#{pageSize}
+           ]]>
+    </select>
+
+    <select id="front.topicTemplate.selectPageCount" parameterType="net.yozo.services.front.TopicTemplate.bean.TopicTemplate"
+            resultType="java.lang.Integer">
+        SELECT count(*) from t_topic_template tt
+             LEFT JOIN t_template t on tt.template_id = t.id and t.status=1
+             where topic_id = #{topicId}
+    </select>
+
+
+
+</mapper>

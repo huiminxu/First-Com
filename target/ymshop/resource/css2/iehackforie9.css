@@ -1,0 +1,25 @@
+/*首页 模板页面 动画 */
+.mbBox ul li a figcaption::before{display: none;}
+/*模板页面 动画 */
+.mb-item .mb-item-img>a figcaption::before {
+    display: none;
+}
+/*柚点购买*/
+.account-box-bg{background-color:#61cff8;}
+
+/*专题详情页面动画*/
+.topic-item .topic-item-img > a figcaption::before{
+    display: none;
+}
+.topic-item .topic-item-img:hover > a figcaption::before{
+    display: none;
+}
+
+
+
+.relate-item .relate-item-img > a figcaption::before{
+    display: none;
+}
+.relate-item .relate-item-img:hover > a figcaption::before{
+    display: none;
+}

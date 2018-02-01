@@ -1,0 +1,1 @@
+package net.yozo.services.front.accountRank;import net.yozo.core.Services;import net.yozo.services.front.accountRank.bean.AccountRank;public interface AccountRankService extends Services<AccountRank> {}

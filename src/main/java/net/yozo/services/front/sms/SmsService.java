@@ -1,0 +1,1 @@
+package net.yozo.services.front.sms;import net.yozo.core.Services;import net.yozo.services.front.sms.bean.Sms;public interface SmsService extends Services<Sms> {}

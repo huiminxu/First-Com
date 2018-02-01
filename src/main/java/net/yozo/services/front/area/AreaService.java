@@ -1,0 +1,1 @@
+package net.yozo.services.front.area;import net.yozo.core.Services;import net.yozo.services.front.area.bean.Area;public interface AreaService extends Services<Area> {}

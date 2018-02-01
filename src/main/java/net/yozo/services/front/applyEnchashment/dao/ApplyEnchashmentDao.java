@@ -1,0 +1,1 @@
+package net.yozo.services.front.applyEnchashment.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.applyEnchashment.bean.ApplyEnchashment;public interface ApplyEnchashmentDao extends DaoManager<ApplyEnchashment> {    ApplyEnchashment selectRecentApplyByAccId(String accountId);}

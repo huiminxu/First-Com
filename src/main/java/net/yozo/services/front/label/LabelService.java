@@ -1,0 +1,1 @@
+package net.yozo.services.front.label;import net.yozo.core.Services;import net.yozo.services.front.label.bean.Label;public interface LabelService extends Services<Label> {	int selectCount(Label ee);}

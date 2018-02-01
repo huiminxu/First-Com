@@ -1,0 +1,1 @@
+package net.yozo.services.front.orderlog;import net.yozo.core.Services;import net.yozo.services.front.orderlog.bean.Orderlog;public interface OrderlogService extends Services<Orderlog> {}

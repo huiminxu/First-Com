@@ -1,0 +1,1 @@
+package net.yozo.services.front.hotquery;import net.yozo.core.Services;import net.yozo.services.front.hotquery.bean.Hotquery;public interface HotqueryService extends Services<Hotquery> {}

@@ -1,0 +1,1 @@
+package net.yozo.services.front.questionnaireItem.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.questionnaireItem.bean.QuestionnaireItem;public interface QuestionnaireItemDao extends DaoManager<QuestionnaireItem> {	int uniqeItem(QuestionnaireItem questionnaireItem);}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="${classPathEntry.location}" />
+	<context id="context" targetRuntime="MyBatis3">
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<!-- jdbc连接信息 -->
+		<jdbcConnection driverClass="${jdbc.driverClass}"
+			connectionURL="${jdbc.connectionURL}" userId="${jdbc.user}" password="${jdbc.password}" />
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false"/>
+		</javaTypeResolver>
+		<!-- 生成对象 -->
+		<javaModelGenerator targetProject="${model.target.dir}" targetPackage="net.yozo.account.entity">
+			<property name="enableSubPackages" value="false" />
+		</javaModelGenerator>
+		<!-- 生成用于查询的Example对象 -->
+		<sqlMapGenerator targetProject="${mapper.target.dir}" targetPackage="mapper">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<!-- 生成DAO的类文件以及配置文件 -->
+		<javaClientGenerator targetProject="${dao.target.dir}" targetPackage="net.yozo.account.mapper"
+			type="XMLMAPPER">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		
+		<!-- 想要生成的数据库表,自动化工具会根据该表的结构生成相应的vo对象 -->
+
+		<table tableName="t_account_info">
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+		</table>
+
+
+		
+		
+	</context>
+</generatorConfiguration>

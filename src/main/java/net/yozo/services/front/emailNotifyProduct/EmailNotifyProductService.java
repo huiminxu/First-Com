@@ -1,0 +1,1 @@
+package net.yozo.services.front.emailNotifyProduct;import net.yozo.core.Services;import net.yozo.services.front.emailNotifyProduct.bean.EmailNotifyProduct;public interface EmailNotifyProductService extends Services<EmailNotifyProduct> {	int selectCount(EmailNotifyProduct ep);}

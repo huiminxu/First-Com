@@ -1,0 +1,1 @@
+package net.yozo.services.front.oss;import net.yozo.core.Services;import net.yozo.services.front.oss.bean.Oss;public interface OssService extends Services<Oss> {}

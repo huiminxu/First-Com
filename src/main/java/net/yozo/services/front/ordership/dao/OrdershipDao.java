@@ -1,0 +1,1 @@
+package net.yozo.services.front.ordership.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.ordership.bean.Ordership;public interface OrdershipDao extends DaoManager<Ordership> {}

@@ -1,0 +1,1 @@
+package net.yozo.services.front.comment;import net.yozo.core.Services;import net.yozo.services.front.comment.bean.Comment;import java.util.List;public interface CommentService extends Services<Comment> {	/**	 * 用户评价商品，评价成功后将该订单项设置为已评价	 * @param e	 * @return	 */	public int insertList(List<Comment> comments);}

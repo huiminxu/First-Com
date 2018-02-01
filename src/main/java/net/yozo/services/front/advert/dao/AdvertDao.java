@@ -1,0 +1,1 @@
+package net.yozo.services.front.advert.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.advert.bean.Advert;public interface AdvertDao extends DaoManager<Advert> {}

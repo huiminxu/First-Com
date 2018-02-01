@@ -1,0 +1,1 @@
+package net.yozo.services.front.spec;import net.yozo.core.Services;import net.yozo.services.front.spec.bean.Spec;public interface SpecService extends Services<Spec> {}

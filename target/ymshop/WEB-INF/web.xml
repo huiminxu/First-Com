@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_9" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>ymshop</display-name>
+
+    <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>jeeshop.root</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:spring/applicationContext.xml</param-value>
+    </context-param>
+    <servlet>
+        <description>spring mvc servlet</description>
+        <servlet-name>springMvc</servlet-name>
+        <servlet-class>net.yozo.core.servlet.MultipartDispatcherServlet</servlet-class>
+        <init-param>
+            <description>spring mvc 配置文件</description>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath*:spring/spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>springMvc</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ValidateImage</servlet-name>
+        <servlet-class>net.yozo.core.servlet.ValidateImage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidateImage</servlet-name>
+        <url-pattern>/ValidateImage.do</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>Set Character Encoding</filter-name>
+        <filter-class>
+            org.springframework.web.filter.CharacterEncodingFilter
+        </filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>Set Character Encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>springSessionRepositoryFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSessionRepositoryFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>
+            org.tuckey.web.filters.urlrewrite.UrlRewriteFilter
+        </filter-class>
+        <init-param>
+            <param-name>logLevel</param-name>
+            <!--               <param-value>WARN</param-value> -->
+            <param-value>INFO</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+
+
+    <session-config>
+        <session-timeout>600</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>/index.ftl</welcome-file>
+        <!-- 项目根目录下必须要有同名文件，才不报错http://www.oschina.net/question/181347_92401 -->
+        <!-- <welcome-file>/index!q.action</welcome-file> -->
+    </welcome-file-list>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>
+                http://jsptags.com/tags/navigation/pager
+            </taglib-uri>
+            <taglib-location>
+                /WEB-INF/jsp/pager-taglib.tld
+            </taglib-location>
+        </taglib>
+    </jsp-config>
+
+    <listener>
+        <listener-class>net.yozo.core.listener.SystemListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>XMLHttpRequestFilter</filter-name>
+        <filter-class>net.yozo.filter.XMLHttpRequestFilter</filter-class>
+
+    </filter>
+    <filter-mapping>
+        <filter-name>XMLHttpRequestFilter</filter-name>
+        <url-pattern>/auth/*</url-pattern>
+    </filter-mapping>
+    <!--cas-->
+    <!--<filter>-->
+        <!--<filter-name>casAuthenticationFilter</filter-name>-->
+        <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>casAuthenticationFilter</filter-name>-->
+        <!--<url-pattern>/auth/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--&lt;!&ndash; 该过滤器负责对Ticket的校验工作，必须启用它 &ndash;&gt;-->
+
+    <!--<filter>-->
+        <!--<filter-name>casValidationFilter</filter-name>-->
+        <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>casValidationFilter</filter-name>-->
+        <!--<url-pattern>/auth/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--&lt;!&ndash; 允许通过HttpServletRequest的getRemoteUser()方法获得SSO登录用户的登录名，可选配置。 &ndash;&gt;-->
+    <!--<filter>-->
+        <!--<filter-name>casHttpServletRequestWrapperFilter</filter-name>-->
+        <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>casHttpServletRequestWrapperFilter</filter-name>-->
+        <!--<url-pattern>/auth/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--&lt;!&ndash; 该过滤器可以通过org.jasig.cas.client.util.AssertionHolder来获取用户的登录名。 比如AssertionHolder.getAssertion().getPrincipal().getName()。 &ndash;&gt;-->
+    <!--<filter>-->
+        <!--<filter-name>casAssertionThreadLocalFilter</filter-name>-->
+        <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>casAssertionThreadLocalFilter</filter-name>-->
+        <!--<url-pattern>/auth/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--&lt;!&ndash; 用于单点退出，该过滤器用于实现单点登出功能，可选配置&ndash;&gt;-->
+    <!--<listener>-->
+        <!--　　<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class></listener>-->
+    <!--<filter>-->
+        <!--<filter-name>casSingleSignOutFilter</filter-name>-->
+        <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+        <!--&lt;!&ndash;<init-param>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>casServerUrlPrefix</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value>http://www.yomoer.cn/cas</param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</init-param>&ndash;&gt;-->
+        <!--&lt;!&ndash;<init-param>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>serverName</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value>http://www.yomoer.cn</param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</init-param>&ndash;&gt;-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>casSingleSignOutFilter</filter-name>-->
+        <!--<url-pattern>/auth/*</url-pattern>-->
+    <!--</filter-mapping>-->
+</web-app>

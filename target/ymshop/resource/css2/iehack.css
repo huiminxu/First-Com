@@ -1,0 +1,566 @@
+/* 版本检测 */
+#browreswarn {
+    background-color: #ffffcc;
+    border: 1px solid #c2c2c2;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* 弹出信息 */
+.pop-msg{font-size:15px;}
+.form-control,.formBox{*padding-left:0 !important; *padding-right: 0 !important; }
+/* index css hack */
+*,*:before,*:after {}
+/* nav */
+.col-xs-2{*width:14.66666% !important;}
+.col-xs-3{*width:22% !important;}
+.col-xs-4{*width:29% !important;}
+.col-xs-5{*width:36.6666% !important;}
+.col-xs-9{*width:66% !important;}
+.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-md-3,.col-md-6{*padding-left:1.5%; *padding-right:1.5%;}
+/* carousel css hack */
+.carousel-indicators{*padding-left:38%;}
+.carousel-indicators li{
+    display:inline-block;
+    *display:inline !important;
+    *zoom:1;}
+/* emoticon css hack */
+.col-md-3{*width: 22% !important; }
+.col-md-6{*width:44% !important; }
+
+/* ae css hack */
+.video-list li{*width:21.5%;}
+/*top menu*/
+#subnav UL LI A{font-size: 17px;}
+.mainMenu .UserBox{height:80%;}
+/* foot css hack */
+.footnav ul li{}
+
+/* display:inlineblock hack */
+/*catalog .html |catalog .html>favo */
+#category-search-nav .big-type li,.favo,.search .search_ipt{
+    display:inline-block;
+    *display:inline !important;
+    *zoom:1;
+}
+.search .search_ipt{ width:62%; padding:11px 0px; }
+/* img  background-size:conver hack */
+#tx,a.scLink,.yomo_icon,.yomo1_icon,.info_icon,.cus_icon,.set_icon,.active .set_icon,.set_icon_small,.order_icon,.out_icon,.down_icon,.see_icon,.refresh_icon,.free_samp,.fav_icon_w,.active .fav_icon_w,.customize-box-top-bg,.customize-box-top-bg a.details,.customize-box-top-bg a,.customize-box-top-bg
+{/* The url is relative to the document, not to the css file! */
+    /* Prefer absolute urls to avoid confusion. */
+  -ms-behavior: url(/resource/hack/backgroundsize.min.htc);
+    behavior: url(/resource/hack/backgroundsize.min.htc);
+}
+/* img  box-size:border-box hack */
+.mb-item .mb-item-img,.topic-item .topic-item-img{
+    *behavior: url(/resource/hack/boxsizing.htc);
+}
+/* account css hack */
+/* pay hack*/
+.order-detail {
+    left: 25%;
+    top: 5%;
+}
+.btn-pay2{background-color:#48b84b ;}
+.btn-pay{font-size:30px;}
+.mainMenu .UserBox .user .yomo_icon{width:33px; height: 33px;}
+
+/*index search*/
+.search {left: 33% !important;}
+
+/* template list */
+.mb-item .mb-item-img:hover>a img {
+    opacity:1;
+}
+
+.mb-item .mb-title { font-size:13px;}
+.mb-item .mb-item-img>a figcaption::before {
+    display: none;
+}
+/* 用户登录 注册 忘记密码 */
+.beuser-main {left: 35% !important; top:5% !important;}
+/*模板详情页面*/
+.catalogdetail-box .catalog-detail{*width:77.5%!important;}
+.catalogdetail-box .catalog-detail h2{font-size:18px;}
+.catalog-detailmore h6{font-size: 14px;}
+.catalog-detailmore .score b{font-size:36px;}
+/*Ie7首页*/
+.carousel-indicators{}
+/*.search a.search_btn{*width:16%;  _width: 0;}*/
+.search A.search_btn{*width:16% !important;  _width: 0;}
+.video-poster{*display:none;}
+.video-box{*display:none;}
+.video-list li{ *width:21%  !important;}
+.foot{  font-size:14px;  }
+.footnav ul li,.wrapper1200 .line,.footnav ul li a{  font-size:12px;}
+.footnav ul li h3{  font-size:13px;}
+.addFri .layui-layer-btn {
+    *+height: 1%;
+}
+
+/* 用户中心 usercenter */
+.usercenter-box .breadcrumbBox{font-size: 22px}
+.usercenter-box  aside{*float:left;}
+.usercenter-box .main{*float:right; *width:78%; }
+.usercenter-box .btn{
+    *padding: 8px 46px;
+}
+.usercenter-box label{
+    font-size:16px;
+}
+.usercenter-box  span.glyphicon{font-size:16px;}
+.usercenter-box  i.icon{font-size:22px;}
+.usercenter-menu a.list-group-item{font-size:20px; }
+#headInfo{*width:94% !important;}
+#headInfo .headDetail h6{font-size:15px !important;}
+#headInfo .headDetail .entervip a{font-size: 12px;}
+.temps-box .other-info em{font-size: 20px !important;}
+.temps-box .panel{*width:47% !important; }
+.news-list ul{font-size:14px !important;}
+.portrait-box{font-size:18px;}
+.portrait-box h6{font-size:20px;}
+.portrait-info .file-box input[type='file']{background-color:#f0f0f0;  }
+
+/*用户中心-表格列表*/
+.tresult-status li{ *width:7.5%!important; }
+.tresult-status li em{font-size:28px;}
+.tresult-status li h2{font-size:16px;}
+.tresult-box table{font-size:15px;}
+.tresult-no{font-size:20px;}
+#headInfo .headDetail .progress .progress-bar{font-size:8px;}
+
+#headInfo .headDetail .vipcenter{font-size:12px;}
+#headInfo .headGift span{font-size:12px !important;}
+.main .duty-box .duty-nav{font-size:28px;}
+.duty-box .tab-content .tab-pane .duty-item .duty-item-sit,.duty-box .tab-content .tab-pane .duty-item .duty-item-reward{font-size:20px;}
+.duty-box .tab-content .tab-pane .duty-item .duty-item-reward2{font-size:15px;}
+.duty-box .tab-content .tab-pane .duty-item .duty-item-act .btn{font-size:20px;}
+.duty-item-act-comp .btn{font-size:20px;}
+
+
+
+
+.catalog-detailmore .btn{*height:28px !important;}
+.w1,.w3{
+    *width:263px !important;
+}
+/*支付*/
+/* ie 7 */
+.pay-box{*width: 500px !important;}
+.paytype-list li {
+    *margin: 0 1% !important;
+}
+.recharge-box{ font-size:14px;}
+.pay-detail p:first-child{ font-size: 14px;}
+.pay-box .pay-result h4{font-size:24px;}
+.pay-box .pay-result a{font-size: 18px;}
+
+.ydpay-detail .detail-yd h4{ font-size: 18px;}
+.ydpay-detail .progress{font-size: 14px;}
+.pay-box-jf{font-size: 14px;}
+.pay-box-jf .order-num{ font-size: 14px;}
+.pay-box-jf .order-type dt{  font-size: 24px;}
+.pay-box-jf .order-type dd{ font-size: 18px;}
+.pay-box-jf .price{  font-size:30px;}
+.pay-box-jf .price sub{font-size:12px;}
+.pay-box-jf .pay-result h4{font-size:24px;}
+.pay-box-jf .pay-result a{font-size: 18px;}
+.btn-pay,.btn-pay2, .btn-pay3 {font-size:30px;}
+.btn-pay4,a.btn-pay5,.btn-pay5{font-size:24px;}
+/*柚点支付*/
+.breadcrumb {font-size:18px;}
+.navbar-account .nav a {
+    font-size:14px;}
+span.recharge-money ,span.recharge-yd{font-size:36px;}
+
+
+/*用户中心*/
+#headInfo .headDetail H6,#headInfo .headDetail .yoleaf,#headInfo .headDetail .progress{ display:inline-block;  *display:inline !important;  *zoom:1;}
+#headInfo .headGift,#headInfo .headGift{*height:28px !important;}
+.duty-item > div{*line-height:98px !important;}
+.duty-item > .duty-item-act{*top:20px;}
+.upofficecen .officecenrit,.upofficecen .officecenrit h3,.officecenrit .buton span{
+    font-size:14px;
+
+}
+.upaecen .aecenrit,.upaecen .aecenrit h3,.aecenrit .buton span,.upemcen .emcenrit,.upemcen .emcenrit h3{
+    font-size:14px;
+}
+.emcenrit .buton span{
+    font-size:14px;
+}
+
+.upintroTop .vertline_tit,.upofficetop p{font-size:20px;}
+.upintro_nav ul li,.officecenrit .buton a,.upaecen .aecenlef,.aecenrit .buton a,.upemcen .emcenlef{
+    font-size:18px;
+}
+.emcenrit .buton a{
+    font-size:18px;
+}
+.upofficecen .officecenlef{
+    font-size:16px;
+}
+.upaetop p,.upemtop p{
+    font-size: 20px;
+}
+.btnagree a{
+    font-size: 12px !important;
+}
+
+
+/*模板管理*/
+.vertline_tit{
+    font-size:22px;
+}
+.manageTop .manage_nav ul li{
+    font-size:18px;
+}
+.table tr td div{
+    font-size:12px;
+}
+.wait{font-size:16px;}
+.causez{font-size:12px;}
+/*上传介绍*/
+.officecenlef .imgScan{*width:34% !important;}
+.upofficecen .officecenrit,.upaecen .aecenrit,.upemcen .emcenrit{*width:46% !important;}
+.officecenrit .buton a,.aecenrit .buton a,.emcenrit .buton a{*width:36% !important;}
+
+/*设计师首页*/
+.designer-list li {
+    *width:21.5% !important;
+
+}
+.customize-box .customize-page ul{
+    *padding-left:40% !important;
+    *margin-top:82px !important;
+}
+
+/*设计师页面*/
+.design-sit > div{
+    *float:left;
+}
+
+#subnav ul li{
+    *width:19% !important;
+}
+.design-list li:hover{
+    cursor:pointer;
+}
+/*.customize-dis:hover{
+    *background-color:#fff !important;
+    *opacity: 1 !important;
+}*/
+.customize-box-top-bg a{
+    top:79% !important;
+    left:26% !important;
+    *top:79% !important;
+    *left:26% !important;
+
+}
+.designer-box ul.pagination{
+    *padding-left: 32% !important;
+    *padding-top: 90px;
+}
+.designer-box .designer-cont .comment-right{
+    *float:right;
+    margin-top:16px;
+    margin-right:40px;
+
+}
+.designer-box .designer-cont .comment-left{
+    *float:left;
+}
+.designer-box .designer-select-item3 table tr.head td.content{
+    *padding-left:40px;
+
+}
+.designer-box .designer-select-item3 table tr.head td.comment{
+    *padding-left:80px;
+}
+.designer-box .designer-select-item3 table tr.body td.content{
+    *padding-right:30px;
+}
+.designer-box .designer-cont .comment-right{
+    *float:left!important;
+    margin-left: 10% !important ;
+}
+.designer-box .designer-select-item3 table tr.body td.comment{
+    *padding-left:80px !important;
+
+}
+.designer-box .designer-select-item3 table tr.body td.content{
+    *padding-left:50px !important;
+}
+.designer-box .designer-select-item3 table tr.head td.user div{
+    font-size:70px !important;
+}
+.designer-box .designer-select-item3 table tr.body td.content span{
+    font-size:10px !important;
+}
+.designer-box .designer-select-item3 table tr.bodyhead td{
+    *font-size:30px !important;
+}
+.designer-box .designer-bar > div,
+.designer-box .designer-bar .amount ,
+.designer-box .designer-select ul > li,
+.designer-box .designer-select-item3 table tr.head td.user div > span,
+.designer-box .designer-select-item3 table tr.head td.user div > span.percent
+{
+    font-size:24px !important;
+}
+.designer-box .designer-cont > p,
+.designer-select-item1 .works-list li p,
+.designer-select-item1 .works-list li .work-title,
+.designer-box .designer-select-item3 table tr.body td.content{
+    font-size:12px !important;
+
+}
+
+
+/*我的定制*/
+.uploadfile-box input[type="file"]{font-size: 15px !important;}
+.customizations-box .operate-box a h2 {font-size:14px;}
+.customizations-box  .operate-box a{
+    font-size:15px;
+}
+.customizations-box .table .btn{
+    font-size: 13px;
+}
+.customizations-box .table .btncustomize img{
+    *margin-left:-17%  !important;
+    *margin-right:1%  !important;
+}
+.customizations-box .table .btncustomize{
+    *height: 22px !important;
+}
+
+/* 我的第定制 -不是设计师*/
+.customizations-box .desginer-no{  font-size: 18px;}
+.customizations-box  .desginerno-text a.btn{font-size: 18px;}
+.customizations-box .stylist .operate-box a{
+
+    *width:28% !important;
+    *margin-left:3%  !important;
+    *margin-right:0%  !important;
+
+
+}
+.uploadfile-box input[type="file"] {
+    font-size:20px;
+}
+.customizations-box .operate-box i{
+  /* */
+    font-size: 35px;
+}
+.customizations-box .operate-box a.delete-btn i{
+    font-size:28px;
+}
+.customizations-box .consumer .operate-box2 .name{
+    font-size:14px;
+}
+.customizations-box .consumer .operate-box2 .name{
+}
+.customizations-box .stylist .wait-confirm p{
+     font-size: 12px !important;
+ }
+.customizations-box .consumer .operate-box2 .name{
+     font-size: 20px;}
+/* 设计师注册 */
+.beDesginer-main p.warn{font-size: 14px;}
+.beDesginer-main .btn{ font-size: 18px;}
+.beDesginer-result{
+    font-size:28px !important;
+}
+.beDesginer-main p.warn,
+.beDesginerSuccess-main .desgin-info{
+    font-size: 14px !important;
+}
+.beDesginer-main .control-label{
+    font-size:18px !important;
+}
+.beDesginer-box h1.page-title {
+    font-size:20px !important;
+}
+.beDesginer-box h1.page-title {
+    font-size:20px !important;
+}
+/*设计师用户中心的样式设计*/
+.customizations .minehack{
+    width:11.5% !important;
+
+}
+.customizations .operate-box{
+    width:252px !important;
+}
+
+.customize-box-main .design-list .design-list-item{
+    width:19.5% !important;
+}
+
+.customize-box-main h2{
+    font-size: 26px !important;
+}
+.customize-box-main .customizeProcess .process-list-item .content,
+.customize-box-main .shadecover,
+.customize-box-main .customizeServive .customize-list-item .title,
+.customize-box-main .customizeServive .customize-list-item .content{
+    *left:0px !important; *width:89%;}
+.customize-box-main .design-list .design-list-item .design-click,
+.customize-box-main .design-list .design-list-item .tobedesign-click,
+.customize-box-main .customizeProcess .process-list-item .content,
+.designer-box .designer-cont .comment-left,
+.designer-box .designer-select-item2 table tr > td,
+.designer-box .designer-select-item3 table tr.head td.comment,
+.designer-box .designer-select-item3 table tr.head td.content,
+.designer-box .designer-select-item3 table tr > td.bodyn,
+.designer-box .designer-select-item2 table tr > td.bodyn,
+.designer-box .designer-select-item3 table tr.body td.user,
+.designer-box .designer-select-item3 table tr.body td.comment {
+    font-size:16px !important;
+}
+.customize-box-main .customizeProcess .process-list-item .content{
+    *width:83%;
+}
+.designer-box .designer-select-item3 table tr.head td.user > span {
+    font-size:14px !important;
+}
+.designer-box .designer-select-item2 table tr.head td{
+    font-size:18px !important;
+}
+.designer-box .designer-cont .comment-right .btn,
+.designer-box .designer-select-item3 table tr.bodyhead td {
+    font-size: 20px !important;
+}
+.customize-box-main .customizeServive .customize-list-item .title,
+.designer-box .designer-cont .comment-right .btn,
+.designer-box .designer-select-item3 table tr.bodyhead td {
+    font-size:20px !important;
+}
+.customize-box-main .customizeProcess  h3,
+.customize-box-main .design-sit > div {
+    font-size:14px !important;
+}
+/*上传定制服务-支付*/
+.customizePay-box .section-title{
+    font-size:24px !important;
+}
+.customizePay-main .col-sm-6{}
+.customizePay-main .customizeinfo{font-size:16px;}
+.customizePay-main  p.warn{font-size:16px;}
+
+/*评估设计师*/
+.designerComment-mian{
+    font-size: 14px !important;
+}
+.designerComment-mian .desgin-info h3,
+.designerComment-mian .btn {
+    font-size:18px !important;
+}
+/*定制上传*/
+.customization-box .btn-yozo {
+    font-size:20px !important;
+}
+
+/*上传介绍页面*/
+#upcustom  .desginer-no{font-size: 24px;}
+.upcustomtop p,
+.upcustombottom a{
+    font-size:12px;
+}
+.upcustombottom  a.btn{
+font-size: 17px;
+}
+
+
+/*上传介绍详情说明页面*/
+.customIntro-box h2{
+    font-size:18px;
+}
+.customIntro-box p{
+    font-size:14px;
+}
+.customIntro-box p.contactService{
+    font-size:12px;
+}
+.memberrec-list li h3,.memberrec-list li p{
+    *width:45% !important;
+}
+.memberrec-list li p.warn del{
+    *text-indent:0px !important;
+}
+
+/*专题收藏*/
+.subjectfavorite-box li{*padding:20px 20px 15px !important;  *width:26.6% !important;}
+.subjectfavorite-box li,.subjectfavorite-box li h3{font-size: 15px;}
+
+
+/*专题详情*/
+.topic-recomed .topic-list li{
+    *width:30% !important;
+}
+.subjectTop .subjectcont h2,.subjectTop .favoRT i{
+    font-size:48px !important;
+    *font-size:48px !important;
+}
+.subjectTop .subjectcont p,.subjectTop .share i{
+    font-size:16px !important;
+    *font-size:16px !important;
+}
+.subjectTop .subjectcont span.date,.subjectTop .share,.topic-list-item .floatl p.date{
+    font-size:12px !important;
+    *font-size:12px !important;
+}
+.topic-recom .category-list-item,.topic-list-item .floatl p{
+    font-size:14px !important;
+    *font-size:14px !important;
+}
+.topic-recom .category-list-item>.fleft,.topic-item .favo i,.topic-recomed h3{
+    font-size:18px !important;
+    *font-size:18px !important;
+}
+.category-list-item .iconfont,.topic-item .mb_price i, .topic-item .mb_score i{
+    font-size:16px !important;
+    *font-size:16px !important;
+}
+
+
+/*专题列表*/
+.topiclist-cont .topiclist-list .topiclist-list-item{
+    *width:30% !important;
+}
+.topiclist-list-item .floatl p{
+    font-size:14px !important;
+    *font-size:14px !important;
+}
+.topiclist-list-item .floatl p.date{
+    font-size:12px !important;
+    *font-size:12px !important;
+}
+.topiclist-cont .more{
+    font-size:18px !important;
+    *font-size:18px !important;
+}
+.topic-item .mb-title{
+  font-size: 13px;
+}
+/*我的收入*/
+.myPurse-info{*overflow:hidden;_zoom:1; }
+.myPurse-info .money{*float:left; *margin-left: 36%;}
+.myPurse-info a{*margin-top:20px; *float:left;}
+.income-box .pages{*position: relative;}
+.income-box .pages .Pagination{*position:absolute; *right:0;}
+.myPurse-info .money h3{font-size: 35px;}
+.myPurse-info .money p{ font-size: 18px;}
+.myPurse-info a.btn{font-size:20px;}
+.myPurse-box ul.incomeGather li h3{font-size: 26px;}
+.myPurse-box ul.incomeGather li p{font-size:18rem;}
+
+/*提现*/
+.withdrawCash-box{font-size: 20px;}
+.withdrawCash-box h6{font-size: 20px;}
+.withdrawCash-box .btnlist button.btn{font-size: 20px; }
+.customize-box-main .customizeServive .customize-list-item .content{
+    font-size:16px;
+}

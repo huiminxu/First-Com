@@ -1,0 +1,1 @@
+package net.yozo.services.front.designerKpi;import net.yozo.core.Services;import net.yozo.services.front.designerKpi.bean.DesignerKpi;import java.math.BigDecimal;public interface DesignerKpiService extends Services<DesignerKpi> {    DesignerKpi compareWithAverage(DesignerKpi designerKpi);    void updateDesingerUnfinishQty(Integer desingerId);}

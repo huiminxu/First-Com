@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<context:property-placeholder location="classpath:config.properties"/>
+	<bean id="accountDataSource" class="com.p6spy.engine.spy.P6DataSource">
+		<constructor-arg ref="accountDataSourceTarget"></constructor-arg>
+	</bean>
+
+	<bean name="accountDataSourceTarget" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url" value="${jdbc.account.url}" />
+		<property name="username" value="${jdbc.account.username}" />
+		<property name="password" value="${jdbc.account.password}" />
+
+		<!-- 初始化连接大小 -->
+		<property name="initialSize" value="10" />
+		<!-- 连接池最大使用连接数量 -->
+		<property name="maxActive" value="50" />
+		<!-- 连接池最大空闲 -->
+		<property name="maxIdle" value="20" />
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle" value="0" />
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="60000" />
+
+		<!-- <property name="poolPreparedStatements" value="true" /> <property name="maxPoolPreparedStatementPerConnectionSize" value="33" /> -->
+
+		<property name="validationQuery" value="1" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<property name="testWhileIdle" value="true" />
+
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="25200000" />
+
+		<!-- 打开removeAbandoned功能 -->
+		<property name="removeAbandoned" value="true" />
+		<!-- 1800秒，也就是30分钟 -->
+		<property name="removeAbandonedTimeout" value="1800" />
+		<!-- 关闭abanded连接时输出错误日志 -->
+		<property name="logAbandoned" value="true" />
+
+		<!-- 监控数据库 -->
+		<!-- <property name="filters" value="stat" /> -->
+		<property name="filters" value="mergeStat" />
+	</bean>
+
+
+	<!--<bean id="accountSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+	<!--<property name="configLocation">-->
+	<!--<value>classpath:mybatis-config.xml</value>-->
+	<!--</property>-->
+	<!--<property name="mapperLocations" value="classpath*:/mapper/**/*.xml" />-->
+	<!--<property name="dataSource" ref="accountDataSource" />-->
+	<!--</bean>-->
+
+	<!-- mybatis文件配置，扫描所有mapper文件 -->
+	<bean id="accountSessionFactory"
+		  class="org.mybatis.spring.SqlSessionFactoryBean"
+		  p:dataSource-ref="accountDataSource"
+		  p:configLocation="classpath:mybatis-config.xml"
+		  p:mapperLocations="classpath*:mapper/**/*Mapper.xml"/>
+
+	<bean id="MapperScannerConfigurer1" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="net.yozo.account"/>
+		<property name="sqlSessionFactory" ref="accountSessionFactory"/>
+	</bean>
+
+	<!-- spring与mybatis整合配置，扫描所有dao -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
+		  p:basePackage="net.yozo.account.mapper.**"
+		  p:sqlSessionFactory-ref="accountSessionFactory"/>
+
+	<!-- 定义事务管理器（声明式的事务） -->
+	<bean id="accountTransactionManager"
+		  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="accountDataSource" />
+	</bean>
+
+
+</beans>

@@ -1,0 +1,1 @@
+package net.yozo.services.front.scoreTask;import net.yozo.core.Services;import net.yozo.services.front.scoreTask.bean.ScoreTask;public interface ScoreTaskService extends Services<ScoreTask> {    /**     * 根据标识获取积分任务     * @param flag     * @return     */    ScoreTask getScoreTaskByFlag(String flag);}

@@ -1,0 +1,1 @@
+package net.yozo.services.front.orderpay;import net.yozo.core.Services;import net.yozo.services.front.order.bean.Order;import net.yozo.services.front.orderpay.bean.Orderpay;public interface OrderpayService extends Services<Orderpay> {	Orderpay selectOneByOrderId(Order exist);}

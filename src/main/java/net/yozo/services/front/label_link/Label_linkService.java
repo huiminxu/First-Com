@@ -1,0 +1,1 @@
+package net.yozo.services.front.label_link;import net.yozo.core.Services;import net.yozo.services.front.label_link.bean.Label_link;public interface Label_linkService extends Services<Label_link> {	/**	 * @param oldAttr	 */	int deleteByCondition(Label_link oldAttr);}

@@ -1,0 +1,1 @@
+package net.yozo.services.front.gift;import net.yozo.core.Services;import net.yozo.services.front.gift.bean.Gift;public interface GiftService extends Services<Gift> {}

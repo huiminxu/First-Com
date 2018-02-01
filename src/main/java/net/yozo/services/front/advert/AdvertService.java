@@ -1,0 +1,1 @@
+package net.yozo.services.front.advert;import net.yozo.core.Services;import net.yozo.services.front.advert.bean.Advert;public interface AdvertService extends Services<Advert> {}

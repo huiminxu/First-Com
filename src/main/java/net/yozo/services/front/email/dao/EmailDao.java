@@ -1,0 +1,1 @@
+package net.yozo.services.front.email.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.email.bean.Email;public interface EmailDao extends DaoManager<Email> {	void updateEmailInvalidWhenReg(Email email);}

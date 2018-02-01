@@ -1,0 +1,1 @@
+package net.yozo.services.front.area.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.area.bean.Area;public interface AreaDao extends DaoManager<Area> {}

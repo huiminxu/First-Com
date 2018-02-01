@@ -1,0 +1,1 @@
+package net.yozo.services.front.recommendTemplate;import net.yozo.core.Services;import net.yozo.services.front.recommendTemplate.bean.PushTemplate;public interface PushTemplateService extends Services<PushTemplate> {}

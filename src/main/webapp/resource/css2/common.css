@@ -1,0 +1,239 @@
+html{font-size:87.5%;}
+.container{width: 1200px; margin: 0 auto;}
+/*-- header --*/
+header .navbar{margin-bottom:0;}
+.navbar-usercenter {
+    margin-bottom: 0;
+    border: 0;
+}
+
+.navbar-usercenter .nav {
+    height: 100%;
+}
+.navbar-usercenter .nav li{margin:0 23px;}
+.navbar-usercenter .nav a {
+	padding: 20px 15px;
+  color: #6c6f70;
+}
+
+.navbar-usercenter .nav a.active {
+    color: #64d8bd;
+}
+
+.navbar-usercenter .nav a:hover {
+    background-color: transparent;
+    color: #64d8bd;
+}
+
+.navbar-usercenter .nav a:focus {
+    background-color: transparent;
+}
+/*-- 面包屑--*/
+.page-nav{border-left:7px solid #64d8bd; padding-left:12px; font-size:1.285714rem; color:#616265;}
+
+/*-- footer--*/
+footer{
+    background: #808182;       
+    width: 100%;
+    min-width: 1200px;
+}
+/*-- 底部 --*/
+#foot {
+    background: #808182;
+    min-width: 1200px;
+}
+
+.foot {
+    background: #f8f8f8;
+    font-size: 1.16666rem;
+}
+
+.copy {
+    line-height: 22px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* 网站导航 */
+.footnav {
+    padding: 22px 0 54px 0;
+    width: 1200px;
+}
+
+.footnav ul {
+    margin-top: 20px;
+}
+.wrapper1200 .line{
+    border-top:2px solid #dadada;
+    text-align: center;
+    line-height:56px;
+    color:#8a8a8a;
+    font-size:1rem;
+}
+.wrapper1200 .line a{
+    display: none;
+}
+
+.footnav ul li {
+    margin-left: 9.95%;
+    width: auto;
+    float: left;
+    color: #333;
+    padding: 0 2%;
+    text-align: left;
+}
+
+.footnav ul li h3 {
+    display: inline-block;
+    font-size: 1.0833333rem;
+    line-height:26px;
+    color: #616265;
+    font-weight:bold;
+    margin:0px;
+    letter-spacing: 1px;
+
+}
+.footnav ul li .mt12{
+    margin-top: 8px;
+}
+
+.footnav ul li a{
+    display: block;
+    width:auto;
+    line-height:24px;
+    font-size: 1rem;
+    font-weight:normal;
+    color: #888;
+    margin:0px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+
+
+}
+
+.footnav ul li a:hover {
+    color: #48b84a;
+}
+.footnav .footer_yomoer{
+    line-height:16px;
+}
+.footnav .footer_connect a{
+    display: inline-block;
+    margin-right:20px;
+}
+
+
+/* 二维码 */
+.qrCode {
+    width: 150px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.qrCode dl {
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.qrCode dl dt {
+    margin-top: 10px;
+
+}
+
+.qrCode dl dd {
+    width: 130px;
+    color: #489912;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/*------------------------------------------------
+                      icon 图标
+        ----------------------------------------------*/
+.qq_icon, .tel_icon, .email_icon, .address_icon,.ym-login-qq, .ym-login-sina, .ym-login-weixin{
+    background: url('../images/Sprite.png') no-repeat;
+}
+
+/*login icon */
+.ym-login-qq {
+    background-position: -1px -1px;
+    width: 24px;
+    height: 27px;
+}
+
+.ym-login-sina {
+    background-position: -2px -59px;
+    width: 28px;
+    height: 23px;
+}
+
+.ym-login-weixin {
+    background-position: -2px -30px;
+     width: 35px;
+    height: 27px;
+}
+
+
+/*footer icon */
+.qq_icon {
+    background-position: -2px -122px;
+    width: 20px;
+    height: 21px;
+}
+
+.tel_icon {
+    background-position: -3px -84px;
+    width: 20px;
+    height: 20px;
+}
+
+.email_icon {
+    background-position: -2px -105px;
+    width: 20px;
+    height: 16px;
+}
+
+.address_icon {
+    background-position: -2px -144px;
+    width: 18px;
+    height: 21px;
+}
+
+
+/*------------------------------------------------
+                    bootstrap 重写
+        ----------------------------------------------*/
+ .glyphicon{top:2px;}
+ 
+a{ color:#666;}
+a:hover{color:#48b84a;}
+a:focus {outline-style: none; color:#666;}
+a:visited{ color:#666;}
+a,a:visited,a:focus,a:hover{text-decoration:none ;}
+
+input[type=checkbox], input[type=radio] {padding:0; margin: 0;}
+ /*------------------------------------------------
+                    bootstrap 添加
+        ----------------------------------------------*/      
+/*按钮  */     
+.btn-yozo {
+  color: #fff;
+  background-color: #00c091;
+  border:0;
+  font-size: 1.285714rem;
+
+}
+.btn-yozo:hover,
+.btn-yozo:focus,
+.btn-yozo:active,
+.btn-yozo:visited{
+  font-size: 1.285714rem;
+  color: #fff;
+  background-color: #01ad83;
+  border:0;
+}
+
+.a-link{color:#00c091;}
+.a-link:visited{color:#00c091;}

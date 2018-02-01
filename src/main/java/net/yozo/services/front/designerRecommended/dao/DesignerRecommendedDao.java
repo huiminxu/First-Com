@@ -1,0 +1,1 @@
+package net.yozo.services.front.designerRecommended.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.designerRecommended.bean.DesignerRecommended;public interface DesignerRecommendedDao extends DaoManager<DesignerRecommended> {}

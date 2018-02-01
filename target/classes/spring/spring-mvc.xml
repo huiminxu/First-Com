@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd  ">
+
+
+<context:component-scan base-package="net.yozo.web.action" />
+    <context:property-placeholder location="classpath:config.properties"/>
+
+
+    <mvc:annotation-driven />
+    <mvc:cors>
+        <mvc:mapping path="/**" allowed-origins="*" allow-credentials="true" max-age="1800" allowed-methods="GET,POST,OPTIONS"/>
+    </mvc:cors>
+    <!--<import resource="classpath*:strutsSpring/front/spring_struts.xml"/>-->
+    <bean   class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+    </bean>
+    <bean id="stringConverter"
+          class="org.springframework.http.converter.StringHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>application/json;charset=UTF-8</value>
+                <value>text/html;charset=UTF-8</value>
+                <value>text/plain;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="jsonConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <list>
+                    <value>application/json;charset=UTF-8</value>
+                    <value>text/html;charset=UTF-8</value>
+                    <value>text/plain;charset=UTF-8</value>
+                </list>
+            </list>
+        </property>
+    </bean>
+
+
+
+
+    <mvc:annotation-driven conversion-service="conversionService">
+        <mvc:message-converters register-defaults="true">
+            <ref bean="stringConverter" />
+            <!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
+            <bean id="fastJsonHttpMessageConverter" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>application/json;charset=UTF-8</value>
+                        <value>application/xml;charset=UTF-8</value>
+                        <value>text/html;charset=UTF-8</value>
+                        <value>text/plain;charset=UTF-8</value>
+                        <value>text/xml;charset=UTF-8</value>
+                        <value>text/javascript;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+    <!-- 配置静态文件路径 -->
+    <!-- max caching age: 24 h -->
+    <mvc:resources mapping="/resource/**" location="/resource/" cache-period="86400"/>
+    <mvc:default-servlet-handler/>
+    <!-- 拦截器 -->
+    <!--<mvc:interceptors>-->
+    <!--</mvc:interceptors>-->
+    <!-- 配置国际化资源文件 -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="i18n/jeeshop" />
+    </bean>
+    <!-- 设置freeMarker配置文件路径 -->
+    <bean id="freemarkerConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:freemarker.properties" />
+    </bean>
+
+    <!-- 配置freeMarker模板路径 -->
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="freemarkerSettings" ref="freemarkerConfiguration" />
+        <property name="templateLoaderPath" value="/" />
+        <property name="defaultEncoding" value="UTF-8" />
+        <!-- 全局变量部分 -->
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="systemManager">
+                    <bean class="net.yozo.core.freemarker.fn.SystemManagerGetter" />
+                </entry>
+                <entry key="systemSetting">
+                    <bean class="net.yozo.core.freemarker.fn.SystemSettingGetter" />
+                </entry>
+                <entry key="currentUser">
+                    <bean class="net.yozo.core.freemarker.fn.CurrentUserGetter" />
+                </entry>
+                <entry key="currentAccount">
+                    <bean class="net.yozo.core.freemarker.fn.CurrentAccountGetter" />
+                </entry>
+                <entry key="checkPrivilege">
+                    <bean class="net.yozo.core.freemarker.fn.PrivilegeChecker" />
+                </entry>
+                <entry key="i18nParser">
+                    <bean class="net.yozo.core.freemarker.fn.I18N" />
+                </entry>
+                <entry key="keyValueParser">
+                    <bean class="net.yozo.core.freemarker.fn.KeyValueGetter" />
+                </entry>
+                <entry key="shoppingCart">
+                    <bean class="net.yozo.core.freemarker.fn.ShoppingCartGetter" />
+                </entry>
+            </map>
+        </property>
+    </bean>
+    <!--配置jsp视图解析器 -->
+    <bean id="viewResolverCommon" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".jsp"/><!--可为空,方便实现自已的依据扩展名来选择视图解释类的逻辑  -->
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="order" value="1"/>
+    </bean>
+    <!-- 配置freeMarker视图解析器 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewClass" value="net.yozo.core.freemarker.view.FreemarkerView"/>
+        <property name="prefix" value="/"/>
+        <property name="contentType" value="text/html; charset=utf-8" />
+        <property name="requestContextAttribute" value="request" />
+        <property name="suffix" value=".ftl" />
+        <property name="order" value="0"/>
+    </bean>
+    <!-- 配置解析JSON所需的解析器 -->
+    <!--<bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />-->
+    <!-- 配置上传文件所需的解析器 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设置上传文件的最大尺寸为10MB -->
+        <property name="maxUploadSize">
+            <value>20000000</value>
+        </property>
+    </bean>
+
+
+    <context:annotation-config />
+    <context:component-scan base-package="net.yozo.core.task" />
+    <task:annotation-driven/>
+    <!--<mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/upload/*" />
+            <ref bean="webitor" />
+        </mvc:interceptor>
+    </mvc:interceptors>-->
+    <!--<bean id="qqOauth" class="com.qq.connect.oauth.Oauth"/>-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+        <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/resource/**"/>
+        <!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
+        <bean class="net.yozo.interceptor.UserInterceptor" >
+            <property name="casValidationFilter" ref="casValidationFilter"/>
+        </bean>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
+</beans>

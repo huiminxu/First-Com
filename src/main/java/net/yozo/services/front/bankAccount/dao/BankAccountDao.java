@@ -1,0 +1,1 @@
+package net.yozo.services.front.bankAccount.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.bankAccount.bean.BankAccount;public interface BankAccountDao extends DaoManager<BankAccount> {}

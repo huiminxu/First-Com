@@ -1,0 +1,1 @@
+package net.yozo.services.front.sms.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.sms.bean.Sms;public interface SmsDao extends DaoManager<Sms> {    String sendVerification(String phoneData,String sendContent);}

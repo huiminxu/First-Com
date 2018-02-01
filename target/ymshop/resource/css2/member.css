@@ -1,0 +1,200 @@
+.member-box {
+    min-width: 1200px;
+    background-image: -webkit-linear-gradient(to bottom, #5ac8fa, #50fbdc);
+    background-image: linear-gradient(to bottom, #5ac8fa, #50fbdc);
+    background-color: #5ac8fa;
+    position: relative;
+}
+
+.member-box a.btn {
+    padding: 10px 34px;
+    font-size: 2rem;
+    background-color: #47b849;
+    color: #47b849;
+    border-radius: 25px;
+}
+
+.member-box-top a {
+    cursor: pointer;
+}
+
+.member-box img {
+    width: 100%;
+    height: auto;
+}
+
+.member-box-top {
+    background: url('../images/member/member-top.jpg') no-repeat top center #280c4c;
+    height: 564px;
+    position: relative;
+}
+
+.member-box-top a.to-recharge {
+    width: 142px;
+    height: 38px;
+    display: block;
+    position: absolute;
+    left: 46%;
+    top: 64%;
+}
+
+.member-box-bg-bottom {
+    width: 100%;
+    height: 957px;
+    background: url('../images/member/member-bottom.png') no-repeat bottom center;
+    position: absolute;
+    bottom: 0;
+}
+
+.member-box-main {
+    z-index: 1;
+    padding-bottom: 262px;
+}
+
+.member-box-main-bg {
+    background: url('../images/member/member-main.png') no-repeat top center;
+    height: 82px;
+    z-index: 2;
+}
+
+.member-box .container {
+    background: #fff;
+     padding-bottom: 50px;
+    width: 1104px !important;
+    padding: 0 34px 150px;
+    position: relative;
+    top: -62px;
+}
+
+.container-bottom {
+    background: url('../images/member/member-main-bottom.png') no-repeat top center;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+    top: -62px;
+}
+
+.to-down {
+    text-align: center;
+    color: #47b849;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.to-down span.down-icon {
+    background: url('../images/member/down-icon.png') no-repeat;
+    width: 57px;
+    height: 34px;
+    display: inline-block;
+}
+
+.privilege-box {
+    padding: 40px 27px 0;
+    text-align: center;
+}
+
+.privilege-box img {
+    margin-bottom: 30px;
+}
+
+.lottery-box {
+    border: 1px solid #dcdcdc;
+    border-radius: 16px;
+    position: relative;
+    padding-top: 29px;
+    font-size: 1.166666rem;
+    margin: 40px 80px 0;
+}
+
+.lottery-megs {
+    height: 50px;
+    border-bottom-left-radius: 16px;
+    overflow: hidden;
+    border-bottom-right-radius: 16px;
+    line-height: 50px;
+    background-color: #fa5179;
+    color: #ffff;
+}
+
+.msgs-logo {
+    display: inline-block;
+    float: left;
+    width:5%;
+}
+
+.sona-icon {
+    background: url('../images/member/suona-icon.png') no-repeat;
+    width: 28px;
+    height: 26px;
+    display: inline-block;
+    margin: 12px;
+}
+
+.lotteryTurntable {
+    min-height: 675px;
+    position: relative;
+    padding: 10px;
+}
+
+.lotteryTurntable-box {
+    background: url('../images/member/lotteryturntable.png') no-repeat;
+    width: 622px;
+    height: 622px;
+    position: relative;
+
+}
+
+.lotteryTurntable-box .rota-arrow {
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    top: 174px;
+    left: 175px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.lotteryTurntable-box .arrow-top {
+    background: url('../images/member/arrow-top.png') no-repeat;
+    width:84px;
+    height: 105px;
+    position: absolute;
+    top: 259px;
+    left:276px;
+    z-index: 3;
+    cursor: pointer;
+}
+.tempWrap {float: left;  width:93% !important; margin-left:2%;}
+.lotteryTurntable-rule {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    text-align: right;
+}
+
+.lotteryTurntable-rule dt {
+    font-size: 2rem;
+    margin: 8px 0;
+}
+
+.lotteryTurntable-rule dd {
+    margin: 4px 0;
+}
+
+.lottery-megs ul {
+
+}
+
+.lottery-megs li {
+    float: left;
+    margin: 0 40px;
+    width: 300px;
+    color: #fff;
+}
+
+.copyright {
+    font-size: 10px;
+    color: #616265;
+    margin-top: 22px;
+    text-align: center;
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.yozo.account.mapper.ext.TAccountInfoExtMapper" >
+    <resultMap id="BaseExtResultMap" type="net.yozo.account.dto.AccountInfo" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="account_id" property="accountId" jdbcType="INTEGER" />
+        <result column="growth_value" property="growthValue" jdbcType="INTEGER" />
+        <result column="score" property="score" jdbcType="INTEGER" />
+        <result column="avater_change" property="avaterChange" jdbcType="INTEGER" />
+        <result column="nickname_change" property="nicknameChange" jdbcType="INTEGER" />
+        <result column="level" property="level" jdbcType="INTEGER" />
+        <result column="rank" property="rank" jdbcType="VARCHAR" />
+        <result column="rank_img" property="rankImg" jdbcType="VARCHAR" />
+        <result column="maxvalues" property="maxvalues" jdbcType="INTEGER" />
+        <result column="nickname" property="nickname" jdbcType="VARCHAR" />
+        <result column="avater" property="avater" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="selectAccountInfo" parameterType="net.yozo.account.dto.AccountInfo" resultMap="BaseExtResultMap"  >
+        SELECT i.*,a.nickname,a.avater
+		FROM t_account_info i,t_account a
+		WHERE i.account_id = #{accountId,jdbcType=INTEGER} AND i.account_id = a.id
+    </select>
+
+    <update id="updateGrowthValue" parameterType="net.yozo.account.dto.AccountInfo" >
+        update t_account_info
+        <set >
+            <if test="growthValue != null" >
+                growth_value = #{growthValue,jdbcType=INTEGER},
+            </if>
+        </set>
+        where 1=1
+        <if test="id != null" >
+            and id=#{id}
+        </if>
+        <if test="accountId != null" >
+            and account_id=#{accountId}
+        </if>
+    </update>
+
+    <insert id="insert" parameterType="net.yozo.account.dto.AccountInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into t_account_info
+        (
+        id
+        <if test="accountId!=null">
+            ,account_id
+        </if>
+        <if test="growthValue!=null">
+            ,growthValue
+        </if>
+        <if test="score!=null">
+            ,score
+        </if>
+        )
+        values
+        (
+        id
+        <if test="accountId!=null">
+            ,#{accountId}
+        </if>
+        <if test="growthValue!=null">
+            ,#{growthValue}
+        </if>
+        <if test="score!=null">
+            ,#{score}
+        </if>
+        )</insert>
+
+    <select id="select" parameterType="net.yozo.account.dto.AccountInfo" resultMap="BaseExtResultMap"  >
+        SELECT * FROM t_account_info WHERE 1=1
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+        <if test="accountId!=null">
+            and account_id=#{accountId}
+        </if>
+    </select>
+
+    <update id="updateScore" parameterType="net.yozo.account.dto.AccountInfo" >
+        update t_account_info
+        <set >
+            <if test="score != null" >
+                score = #{score,jdbcType=INTEGER},
+            </if>
+            <if test="avaterChange != null" >
+                avater_change = #{avaterChange,jdbcType=INTEGER},
+            </if>
+            <if test="nicknameChange != null" >
+                nickname_change = #{nicknameChange,jdbcType=INTEGER},
+            </if>
+        </set>
+        where 1=1
+        <if test="id != null" >
+            and id=#{id}
+        </if>
+        <if test="accountId != null" >
+            and account_id=#{accountId}
+        </if>
+
+    </update>
+
+    <select id="selectByAccount" parameterType="net.yozo.account.dto.AccountInfo" resultMap="BaseExtResultMap"  >
+        SELECT * FROM t_account_info WHERE  account_id=#{accountId}
+    </select>
+</mapper>

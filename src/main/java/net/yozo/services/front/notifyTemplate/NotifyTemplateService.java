@@ -1,0 +1,1 @@
+package net.yozo.services.front.notifyTemplate;import net.yozo.core.Services;import net.yozo.services.front.notifyTemplate.bean.NotifyTemplate;public interface NotifyTemplateService extends Services<NotifyTemplate> {}

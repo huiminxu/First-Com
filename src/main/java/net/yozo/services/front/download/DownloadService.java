@@ -1,0 +1,1 @@
+package net.yozo.services.front.download;import net.yozo.core.Services;import net.yozo.services.front.download.bean.Download;public interface DownloadService extends Services<Download> {	int selectCount(Download download);	/**	 * 头像更新	 *@param download	 */	void updateLastDownloadTime(Download download);}

@@ -1,0 +1,1 @@
+package net.yozo.services.front.pay.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.order.bean.Order;import net.yozo.services.front.pay.bean.Pay;public interface PayDao extends DaoManager<Pay> {    String getWeixinQR(Order order);    String getZhifubaoQR(Order order);    String payQuery(Order order);}

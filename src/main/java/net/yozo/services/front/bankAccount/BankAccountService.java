@@ -1,0 +1,1 @@
+package net.yozo.services.front.bankAccount;import net.yozo.core.Services;import net.yozo.services.front.bankAccount.bean.BankAccount;public interface BankAccountService extends Services<BankAccount> {}

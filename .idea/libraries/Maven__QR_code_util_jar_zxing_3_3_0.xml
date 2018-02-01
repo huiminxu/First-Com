@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: QR_code_util.jar:zxing:3.3.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/QR_code_util/jar/zxing/3.3.0/zxing-3.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/QR_code_util/jar/zxing/3.3.0/zxing-3.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/QR_code_util/jar/zxing/3.3.0/zxing-3.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

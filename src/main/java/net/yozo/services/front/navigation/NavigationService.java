@@ -1,0 +1,1 @@
+package net.yozo.services.front.navigation;import net.yozo.core.Services;import net.yozo.services.front.navigation.bean.Navigation;public interface NavigationService extends Services<Navigation> {}

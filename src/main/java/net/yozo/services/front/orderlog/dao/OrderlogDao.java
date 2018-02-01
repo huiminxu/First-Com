@@ -1,0 +1,1 @@
+package net.yozo.services.front.orderlog.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.orderlog.bean.Orderlog;public interface OrderlogDao extends DaoManager<Orderlog> {	int selectCount(Orderlog orderlog);}

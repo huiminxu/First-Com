@@ -1,0 +1,1 @@
+package net.yozo.services.front.spec.dao;import net.yozo.core.DaoManager;import net.yozo.services.front.spec.bean.Spec;public interface SpecDao extends DaoManager<Spec> {}

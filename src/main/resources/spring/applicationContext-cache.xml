@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="classpath:config.properties"/>
+
+    <bean id="systemManager" class="net.yozo.core.front.SystemManager">
+        <property name="cacheProvider" ref="simpleCacheProvider"/>
+    </bean>
+
+    <!-- cache provider -->
+    <bean id="simpleCacheProvider" class="net.yozo.core.cache.SimpleCacheProvider"/>
+
+    <!--<bean id="ehcacheCacheProvider" class="net.yozo.core.cache.EhcacheCacheProvider">
+        <property name="configLocation" value="classpath:ehcache.xml"></property>
+        <property name="cacheName" value="eternalCache"/>
+    </bean>-->
+
+    <bean id="redisCacheProvider" class="net.yozo.core.cache.RedisCacheProvider">
+        <property name="redisTemplate" ref="redisTemplate"/>
+    </bean>
+
+
+    <!--<cache:annotation-driven/>-->
+    <bean id="jedisConnectionFactory"
+          class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="hostName" value="${redis.ip}"/>
+        <property name="port" value="${redis.port}"/>
+        <property name="password" value="${redis.password}"/>
+        <property name="poolConfig" ref="jedisPoolConfig"/>
+    </bean>
+    <bean id="stringRedisSerializer"
+          class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">
+        <property name="connectionFactory" ref="jedisConnectionFactory"/>
+        <property name="keySerializer" ref="stringRedisSerializer" />
+        <property name="hashKeySerializer" ref="stringRedisSerializer" />
+    </bean>
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="200"/>
+        <property name="maxIdle" value="150"/>
+        <property name="maxWaitMillis" value="1000"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testOnReturn" value="true"/>
+        <property name="testWhileIdle" value="true"/>
+    </bean>
+
+
+    <!-- 将session放入redis -->
+    <bean class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration"/>
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- create by autoCode,v1.0.0 -->
+<mapper namespace="front.topic">
+    <select id="front.topic.selectList" parameterType="net.yozo.services.front.topic.bean.Topic"
+            resultType="net.yozo.services.front.topic.bean.Topic">
+          <![CDATA[
+            SELECT t2.*,YEAR(t1.created_time) as year,count(*) as period from t_topic t1 join t_topic t2
+            on  t1.status=1 and t2.status=1 and YEAR(t1.created_time) = YEAR(t2.created_time)  and t1.topic_period<=t2.topic_period
+            GROUP BY YEAR(t1.created_time),t2.topic_period  ORDER BY YEAR(t1.created_time) DESC limit #{start},#{offset}
+           ]]>
+    </select>
+
+    <select id="front.topic.selectCount" parameterType="net.yozo.services.front.topic.bean.Topic"
+            resultType="java.lang.Integer">
+        SELECT  count(id) from t_topic where status =1
+    </select>
+
+    <select id="front.topic.selectById" parameterType="string"
+            resultType="net.yozo.services.front.topic.bean.Topic">
+        <![CDATA[
+        SELECT t2.*,YEAR(t1.created_time) as year,count(*) as period from t_topic t1 join t_topic t2
+        on  t1.status=1 and t2.status=1  and t1.id=#{id} and t2.id=#{id} and YEAR(t1.created_time) = YEAR(t2.created_time)  and t1.topic_period<=t2.topic_period
+        GROUP BY YEAR(t1.created_time),t2.topic_period
+        ]]>
+    </select>
+
+</mapper>
